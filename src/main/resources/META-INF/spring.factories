@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  cn.itcast.em.boot.autoconfigure.EagleMapConfigAutoConfiguration
+  com.itheima.em.boot.autoconfigure.EagleMapConfigAutoConfiguration

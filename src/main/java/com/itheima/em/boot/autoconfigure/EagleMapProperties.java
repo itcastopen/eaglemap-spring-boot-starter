@@ -1,4 +1,4 @@
-package cn.itcast.em.boot.autoconfigure;
+package com.itheima.em.boot.autoconfigure;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

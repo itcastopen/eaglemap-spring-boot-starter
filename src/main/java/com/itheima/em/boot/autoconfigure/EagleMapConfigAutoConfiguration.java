@@ -1,4 +1,4 @@
-package cn.itcast.em.boot.autoconfigure;
+package com.itheima.em.boot.autoconfigure;
 
 import cn.itcast.em.sdk.EagleMapTemplate;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
