@@ -1,6 +1,6 @@
 package com.itheima.em.boot.autoconfigure;
 
-import cn.itcast.em.sdk.EagleMapTemplate;
+import com.itheima.em.sdk.EagleMapTemplate;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
