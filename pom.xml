@@ -12,9 +12,10 @@
 
     <groupId>com.itheima.em</groupId>
     <artifactId>eaglemap-spring-boot-starter</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <name>${project.artifactId}</name>
     <description>EagleMap-sdk是基于EagleMap的restful接口实现的Java SDK的封装。</description>
+    <url>https://www.itcast.cn/</url>
 
     <licenses>
         <license>
@@ -56,7 +57,7 @@
         <dependency>
             <groupId>com.itheima.em</groupId>
             <artifactId>EagleMap-sdk</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
@@ -72,6 +73,58 @@
                     <target>8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <additionalJOptions>
+                        <additionalJOption>-Xdoclint:none</additionalJOption>
+                    </additionalJOptions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <keyname>0xB2355CFD</keyname>
+                            <passphraseServerId>0xB2355CFD</passphraseServerId>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -117,55 +170,6 @@
                                 <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                                 <autoReleaseAfterClose>true</autoReleaseAfterClose>
                             </configuration>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-source-plugin</artifactId>
-                            <version>2.2.1</version>
-                            <executions>
-                                <execution>
-                                    <id>attach-sources</id>
-                                    <goals>
-                                        <goal>jar-no-fork</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-javadoc-plugin</artifactId>
-                            <version>2.9.1</version>
-                            <executions>
-                                <execution>
-                                    <id>attach-javadocs</id>
-                                    <goals>
-                                        <goal>jar</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                            <configuration>
-                                <additionalJOptions>
-                                    <additionalJOption>-Xdoclint:none</additionalJOption>
-                                </additionalJOptions>
-                            </configuration>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-gpg-plugin</artifactId>
-                            <version>1.5</version>
-                            <executions>
-                                <execution>
-                                    <id>sign-artifacts</id>
-                                    <phase>verify</phase>
-                                    <goals>
-                                        <goal>sign</goal>
-                                    </goals>
-                                    <configuration>
-                                        <keyname>0xB2355CFD</keyname>
-                                        <passphraseServerId>0xB2355CFD</passphraseServerId>
-                                    </configuration>
-                                </execution>
-                            </executions>
                         </plugin>
                     </plugins>
                 </pluginManagement>

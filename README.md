@@ -10,6 +10,17 @@ https://gitee.com/itcastopen/EagleMap-sdk.git
 
 https://github.com/itcastopen/EagleMap-sdk.git
 
+# 版本说明
+
+> 建议使用稳定版。
+
+| 项目                         | 最新稳定版 | 发布时间   |
+| ---------------------------- | ---------- | ---------- |
+| EagleMap-sdk                 | 1.0        | 2022-03-31 |
+| eaglemap-spring-boot-starter | 1.0        | 2022-03-31 |
+
+目前最新快照版为：1.1-SNAPSHOT
+
 # 快速使用
 
 > **第一步，导入maven依赖**
